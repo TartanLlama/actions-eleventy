@@ -1,9 +1,10 @@
 jobs:
-  steps:
-    - name: Build
-      uses: ./
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v1.1.0
-      with:
-        publish_dir: _site 
-        publish_branch: gh-pages
+  test:
+    steps:
+      - name: Build
+        uses: ./
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v1.1.0
+        with:
+          publish_dir: _site 
+          publish_branch: gh-pages
