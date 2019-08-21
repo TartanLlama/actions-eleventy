@@ -5,11 +5,12 @@ jobs:
   test:
     runs-on: ubuntu-18.04
     steps:
+      - uses: actions/checkout@master
       - name: Build
         uses: TartanLlama/actions-eleventy@master
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v1.1.0
-        with:
-          publish_dir: _site 
-          publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          PUBLISH_DIR: _site 
+          PUBLISH_BRANCH: gh-pages
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
