@@ -1,0 +1,10 @@
+name: 'Eleventy Action'
+description: 'Build your Eleventy-based static website'
+author: 'Sy Brand'
+inputs: 
+  args:
+    description: 'Arguments to pass to the Eleventy invocation'
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

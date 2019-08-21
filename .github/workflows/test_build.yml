@@ -1,0 +1,8 @@
+jobs:
+  build:
+    uses: ./
+  deploy:
+    uses: peaceiris/actions-gh-pages@v1.1.0
+    with:
+      publish_dir: _site 
+      publish_branch: gh-pages
