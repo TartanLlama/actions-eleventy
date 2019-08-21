@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - name: Build
-        uses: ./
+        uses: TartanLlama/actions-eleventy@master
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v1.1.0
         with:
