@@ -3,6 +3,7 @@ on: [push]
 
 jobs:
   test:
+    runs-on: ubuntu-18.04
     steps:
       - name: Build
         uses: ./
