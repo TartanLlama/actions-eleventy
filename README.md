@@ -29,7 +29,7 @@ You can pass additional arguments to `eleventy` through the `args` option:
 
 ```yaml
 - name: Build
-  uses: TartanLlama/actions-eleventy@v1.0
+  uses: TartanLlama/actions-eleventy@v1.1
   with:
     args: <additional arguments>
 ```
