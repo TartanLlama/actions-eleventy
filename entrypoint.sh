@@ -1,4 +1,4 @@
 #!/bin/sh
 
 echo "Running eleventy"
-eleventy $ARGS
+eleventy $INPUT_ARGS
