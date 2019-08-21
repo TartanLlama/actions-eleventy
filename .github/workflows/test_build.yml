@@ -1,8 +1,8 @@
 jobs:
   steps:
-    build:
+    - name: Build
       uses: ./
-    deploy:
+    - name: Deploy
       uses: peaceiris/actions-gh-pages@v1.1.0
       with:
         publish_dir: _site 
