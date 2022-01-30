@@ -1,0 +1,53 @@
+<h1>GitHub Action for Eleventy</h1>
+<p>Use this action to build your static website with <a href="https://www.11ty.io/">Eleventy</a>.</p>
+<p>To use it, create a <code>.github/workflows/eleventy_build.yml</code> file which <a href="https://help.github.com/en/articles/workflow-syntax-for-github-actions#jobsjob_idsteps">uses this repository</a> as an action.</p>
+<p>Here's an example which builds the site with this action, then deploys to GitHub Pages with <a href="https://github.com/peaceiris/actions-gh-pages">peaceiris/actions-gh-pages</a>:</p>
+<pre><code class="language-yaml">name: Eleventy Build
+on: [push]
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+      - name: Build
+        uses: TartanLlama/actions-eleventy@master
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: _site 
+          publish_branch: gh-pages
+          github_token: $
+</code></pre>
+<p>This action accepts a couple of optional inputs:</p>
+<table>
+<thead>
+<tr>
+<th>Input Name</th>
+<th style="text-align:center">Required?</th>
+<th style="text-align:center">Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>args</code></td>
+<td style="text-align:center">No</td>
+<td style="text-align:center"><code>&quot;&quot;</code></td>
+<td>Arguments to pass to the Eleventy invocation</td>
+</tr>
+<tr>
+<td><code>install_dependencies</code></td>
+<td style="text-align:center">No</td>
+<td style="text-align:center"><code>false</code></td>
+<td>If set to <code>true</code>, <code>npm install</code> will be run before Eleventy is invoked</td>
+</tr>
+</tbody>
+</table>
+<p>For example:</p>
+<pre><code class="language-yaml">- name: Build
+  uses: TartanLlama/actions-eleventy@v1.3
+  with:
+    args: --output _dist
+    install_dependencies: true
+</code></pre>
