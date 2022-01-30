@@ -36,7 +36,7 @@ For example:
 
 ```yaml
 - name: Build
-  uses: TartanLlama/actions-eleventy@v1.1
+  uses: TartanLlama/actions-eleventy@v1.3
   with:
     args: --output _dist
     install_dependencies: true
