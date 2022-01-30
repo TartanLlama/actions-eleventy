@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Build
-        uses: TartanLlama/actions-eleventy@v1.1
+        uses: TartanLlama/actions-eleventy@v1.3
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v1.1.0
         env:
@@ -36,7 +36,7 @@ For example:
 
 ```yaml
 - name: Build
-  uses: TartanLlama/actions-eleventy@v1.1
+  uses: TartanLlama/actions-eleventy@v1.3
   with:
     args: --output _dist
     install_dependencies: true
