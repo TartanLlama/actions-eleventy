@@ -16,13 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Build
-        uses: TartanLlama/actions-eleventy@v1.3
+        uses: TartanLlama/actions-eleventy@master
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v1.1.0
-        env:
-          PUBLISH_DIR: _site 
-          PUBLISH_BRANCH: gh-pages
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: _site 
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 This action accepts a couple of optional inputs:
