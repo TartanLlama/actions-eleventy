@@ -31,7 +31,8 @@ This action accepts a couple of optional inputs:
 | ---------------------- | :-------: | :-----: | ---------------------------------------------------------------------- |
 | `args`                 |    No     |  `""`   | Arguments to pass to the Eleventy invocation                           |
 | `install_dependencies` |    No     | `false` | If set to `true`, `npm install` will be run before Eleventy is invoked |
-
+| `npm_script`           |    No     |  `""`   | Reference npm script to do npm run -script name-. Only works if install|
+|                        |           |         | dependencies == true
 For example:
 
 ```yaml
@@ -39,6 +40,6 @@ For example:
   uses: TartanLlama/actions-eleventy@v1.3
   with:
     args: --output _dist
-    build_task: build # This will do - npm run build script in package.json
     install_dependencies: true
+    npm_script: build # This will do - npm run build script in package.json
 ```
