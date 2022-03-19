@@ -31,7 +31,7 @@ This action accepts a couple of optional inputs:
 | ---------------------- | :-------: | :-----: | ---------------------------------------------------------------------------------------------|
 | `args`                 |    No     |  `""`   | Arguments to pass to the Eleventy invocation                                                 |
 | `install_dependencies` |    No     | `false` | If set to `true`, `npm install` will be run before Eleventy is invoked                       |
-| `npm_script`           |    No     |  `""`   | Reference npm script to do npm run -script name-. Only works if install_dependencies == true |
+| `npm_script`           |    No     |  `""`   | Reference npm script to do npm run *script name*. Only works if install_dependencies == true |
 
 ```yaml
 - name: Build
