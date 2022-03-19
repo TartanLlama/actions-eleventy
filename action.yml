@@ -9,8 +9,8 @@ inputs:
     description: 'If set to `true`, `npm install` will be run before Eleventy is invoked'
     required: false
     default: false
-  build_task:
-    description: 'Use to add npm script from package.json'
+  build_script:
+    description: 'Run an npm script from package.json'
     required: false
 runs:
   using: 'docker'
