@@ -39,5 +39,6 @@ For example:
   uses: TartanLlama/actions-eleventy@v1.3
   with:
     args: --output _dist
+    build_task: build # This will do - npm run build script in package.json
     install_dependencies: true
 ```
