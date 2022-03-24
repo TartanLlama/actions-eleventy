@@ -10,7 +10,7 @@ inputs:
     required: false
     default: false
   build_script:
-    description: 'Run an npm script from package.json'
+    description: 'Run an npm command or script from package.json'
     required: false
 runs:
   using: 'docker'
