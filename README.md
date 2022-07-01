@@ -38,6 +38,6 @@ For example:
 - name: Build
   uses: TartanLlama/actions-eleventy@v1.3
   with:
-    args: --output _dist
+    args: '--output=_dist'
     install_dependencies: true
 ```
