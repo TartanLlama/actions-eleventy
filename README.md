@@ -12,7 +12,7 @@ on: [push]
 
 jobs:
   build_deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - name: Build
